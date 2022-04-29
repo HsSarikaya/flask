@@ -31,7 +31,7 @@ data "aws_ami" "amazon-linux-2" {
 resource "aws_instance" "tf-flask-ec2" {
   ami = data.aws_ami.amazon-linux-2.id
   instance_type = "t2.micro"
-  key_name = "first_key" # dont forget to change here (without .pem)
+  key_name = "firstkey" # dont forget to change here (without .pem)
   security_groups = ["tf-sec-gr"]
   tags = {
     Name = "Flask-app"
